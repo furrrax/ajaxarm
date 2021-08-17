@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    //height: unset;
+    //position: relative;
+}
+
+ul, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul > li {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    position: relative;
+    
+    &--main {
+        position: unset;
+    }
+
+    &__container {
+        max-width: 1024px;
+        margin: 0 auto;
+        position: relative;
+        //background-color: #E5E5E5;
+
+        @include tablets {
+            max-width: 768px;
+        }
+
+        @include phones {
+            max-width: unset;
+            width: 100%;
+        }
+    }
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 904px;
+    margin: 0 auto;
+
+    @include tablets {
+        width: 680px;
+    }
+
+    @include phones {
+        width: 85%;
+    }
+}

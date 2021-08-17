@@ -1,0 +1,147 @@
+.contact {
+    border-top: 2px solid #ffffff;
+
+    &__info {
+        padding: 36px 0;
+        background-color: #222E53;
+
+        @include tablets {
+            padding: 20px;
+        }
+
+        @include phones {
+            padding: 31px 0;
+        }
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #fff;
+
+            @include tablets {
+                padding-bottom: 25px;
+            }
+
+            &__text {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                letter-spacing: 0.14em;
+                color: #FFFFFF;
+                margin-bottom: 14px;
+
+                @include tablets {
+                    font-weight: 900;
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin-bottom: 10px;
+                }
+
+                @include phones {
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 21px;
+                    text-align: center;
+                }
+            }
+
+            &__pic {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            &__img {
+                width: 47px;
+                height: 47px;
+
+                @include tablets {
+                    width: 34px;
+                    height: 40px;
+                }
+            }
+        }
+
+        &__data {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 27px;
+
+            @include tablets {
+                padding-top: 16px;
+                justify-content: space-between;
+            }
+
+            @include phones {
+                padding-top: 28px;
+            }
+
+            &__list {
+                max-width: 365px;
+
+                @include tablets {
+                    max-width: 270px;
+                }
+
+                @include phones {
+                    max-width: 170px;
+                }
+
+                &:last-child {
+                    margin-right: 15%;
+
+                    @include phones {
+                        margin-right: 0;
+                    }
+                }
+
+                &__text {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 34px;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+
+                    @include tablets {
+                        font-size: 13px;
+                        line-height: 210%;
+                    }
+
+                    @include phones {
+                        font-size: 9px;
+                        //line-height: 80%;
+                    }
+
+                    & > b {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+
+    &__container {
+
+        &--contact {
+            padding: 25px 0;
+
+            @include tablets {
+                padding: 10px 0;
+            }
+
+            .footer__logo__img {
+                width: 159px;
+                height: 54px;
+            }
+        }
+    }
+}

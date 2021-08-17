@@ -1,0 +1,577 @@
+.prod {
+    border-top: 2px solid #ffffff;
+
+    &__title {
+        background-color: #222E53;
+        padding-top: 28px;
+        padding-bottom: 35px;
+
+        @include tablets {
+            padding: 20px 0;
+        }
+
+        @include phones {
+            padding: 17px 0;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text > h1 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            text-align: center;
+            letter-spacing: 0.14em;
+            color: #FFFFFF;
+
+            @include tablets {
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            @include phones {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+
+        &__pic {
+            margin-top: 16px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            @include phones {
+                margin-top: 10px;
+            }
+        }
+
+        &__img {
+            width: 37px;
+            height: 36px;
+            fill: #2DAAE2;
+
+            @include tablets {
+                width: 33px;
+                height: 33px;
+            }
+        }
+    }
+
+    &__assort {
+        padding-top: 40px;
+        background: linear-gradient(179.45deg, #D3D8DC 38.6%, #EBEDEF 84.29%, #FFFFFF 95.4%);
+
+        @include tablets {
+            padding-top: 23px;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 35px;
+
+            @include tablets {
+                margin-bottom: 27px;
+            }
+        }
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 27px;
+
+            @include tablets {
+                margin-bottom: 17px;
+            }
+
+            @include phones {
+                flex-direction: column;
+                justify-content: unset;
+                align-items: center;
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+
+                @include phones {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &__cell {
+            border-radius: 10px;
+            overflow: hidden;
+            width: 443px;
+            height: 549px;
+            position: relative;
+
+            @include tablets {
+                width: 330px;
+                height: 410px;
+            }
+
+            @include phones {
+                width: 100%;
+                max-height: 350px;
+
+                &:last-child {
+                    margin-top: 20px;
+                }
+            }
+
+            &--big {
+
+                @include phones {
+                    max-height: 270px;
+                }
+
+                &:hover {
+                    //outline: 2px solid #222E53;
+                    box-shadow: 0 0 3pt 2pt cornflowerblue;
+                    transition: box-shadow 0.3s;
+                }
+            }
+
+            &--small {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                @include phones {
+                    height: 100%;
+                    justify-content: space-around;
+                }
+            }
+
+            &--medium {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                @include phones {
+                    justify-content: space-around;
+                }
+
+                & > .prod__assort__cell__item--small {
+                    align-self: flex-end;
+
+                    @include phones {
+                        align-self: unset;
+                        height: 100%;
+                    }
+                }
+
+                @include phones {
+                    margin-top: 0;
+                }
+            }
+            
+            &__item {
+
+                &--big {
+                    position: relative;
+                    height: 100%;
+                    
+                    & > .prod__assort__cell__item__pic {
+                        width: 100%;
+                        height: 100%;
+
+                        & > .prod__assort__cell__item__img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    & > .prod__assort__cell__item__desc {
+                        padding-left: 27px;
+                        position: absolute;
+                        top: 0px;
+                        left: 0;
+                        right: 0;
+                        height: 76px;
+                        display: flex;
+                        align-items: center;
+                        background: rgba(70, 91, 164, 0.6);
+
+                        @include tablets {
+                            height: 57px;
+                        }
+
+                        @include phones {
+                            height: 48px;
+                        }
+
+                        & > .prod__assort__cell__item__text {
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 26px;
+                            line-height: 106.19%;
+                            letter-spacing: 0.02em;
+                            color: #FFFFFF;
+
+                            @include tablets {
+                                font-size: 20px;
+                            }
+
+                            @include phones {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+
+                &--small {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include phones {
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    
+                    &:nth-child(3), &:last-child {
+                        align-self: flex-end;
+
+                        @include phones {
+                            align-self: unset;
+                        }
+                    }
+
+                    & > .prod__assort__cell__item__pic {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 210px;
+                        width: 210px;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        background-color: #ffffff;
+                        padding: 10px 10px;
+                        margin-bottom: 17px;
+
+                        @include tablets {
+                            width: 160px;
+                            height: 160px;
+                            margin-bottom: 10px;
+                        }
+
+                        @include phones {
+                            width: 128px;
+                            height: 128px;
+                        }
+
+                        & > .prod__assort__cell__item__img {
+                            object-fit: contain;
+                            height: 100%;
+                            width: 100%;
+                        }
+
+                        &--full {
+                            padding: 0;
+                        }
+                    }
+
+                    & > .prod__assort__cell__item__desc {
+                        display: flex;
+                        justify-content: center;
+                        padding: 10px 0;
+                        background-color: #465BA4;
+                        border-radius: 35px;
+
+                        @include tablets {
+                            padding: 6px 0;
+                        }
+
+                        & > .prod__assort__cell__item__text {
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 12px;
+                            line-height: 14px;
+                            letter-spacing: 0.02em;
+                            color: #FFFFFF;
+
+                            @include tablets {
+                                font-size: 9px;
+                                line-height: 11px;
+                            }
+
+                            @include phones {
+                                font-size: 8px;
+                                line-height: 9px;
+                            }
+                        }
+                    }
+                }
+
+                &--medium {
+                    width: 100%;
+                    height: 263px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    position: relative;
+
+                    @include tablets {
+                        height: 194px;
+                    }
+
+                    @include phones {
+                        height: 161px;
+                        margin-bottom: 20px;
+                    }
+
+                    & > .prod__assort__cell__item__pic {
+                        width: 100%;
+                        height: 100%;
+
+                        & > .prod__assort__cell__item__img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    & > .prod__assort__cell__item__desc {
+                        padding-left: 32px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                        right: 0;
+                        height: 90px;
+                        display: flex;
+                        align-items: center;
+                        background: rgba(70, 91, 164, 0.6);
+
+                        @include tablets {
+                            height: 63px;
+                        }
+
+                        @include phones {
+                            height: 52px;
+                        }
+
+
+                        & > .prod__assort__cell__item__text {
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 30px;
+                            line-height: 106%;
+                            letter-spacing: 0.02em;
+                            color: #FFFFFF;
+
+                            @include tablets {
+                                font-size: 20px;
+                            }
+
+                            @include phones {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__logos {
+        background-color: #ffffff;
+        padding: 40px 0;
+
+        @include tablets {
+            padding: 20px 0;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            margin-bottom: -23px;
+        }
+
+        &__item {
+            margin-bottom: 23px;
+            //max-width: 160px;
+            width: calc((100% - 50px) / 5);
+
+            @include tablets {
+                max-width: 135px;
+                width: unset;
+            }
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__img {
+            object-fit: contain;
+            //height: 100%;
+            //width: 100%;
+
+            @include tablets {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.order__info {
+
+    &--prod {
+        & > .order__info__container {
+            display: flex;
+            flex-direction: column;
+            
+            & > .order__info__title {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 16px;
+
+                @include phones {
+                    margin-bottom: 8px;
+                }
+
+                & > .order__info__title__text {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 0.02em;
+                    color: #1A2340;
+                    text-align: center;
+
+                    @include tablets {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    @include phones {
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        @include phones {
+            flex-direction: column;
+            justify-content: unset;
+        }
+
+        &__left, &__right {
+            max-width: 45%;
+
+            @include phones {
+                max-width: unset;
+            }
+
+            &__item {
+                position: relative;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.02em;
+                color: #1A2340;
+
+                @include tablets {
+                    font-size: 11px;
+                    line-height: 12px;
+                }
+
+                @include phones {
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: #ffffff;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: #1A2340;
+                    top: 5px;
+                    left: -11px;
+
+                    @include tablets {
+                        width: 4px;
+                        height: 4px;
+                        top: 3px;
+                        left: -9px;
+                    }
+
+                    @include phones {
+                        background-color: #ffffff;
+                    }
+                }
+            }            
+        }
+    }
+
+    &__contacts {
+        max-width: 775px;
+
+        &__text {
+            display: inline-block;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            color: #1A2340;
+
+            @include tablets {
+                font-size: 11px;
+                line-height: 12px;
+            }
+
+            @include phones {
+                font-size: 10px;
+                line-height: 12px;
+                color: #ffffff;
+            }
+
+            & > a {
+                font-weight: 900;
+                color: #1A2340;
+
+                @include phones {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,207 @@
+.sub {
+    border-top: 2px solid #ffffff;
+
+    &__item {
+
+        &__title {
+            padding: 45px 0;
+            background-color: #1A2340;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            @include tablets {
+                padding: 25px 0;
+            }
+
+            &__text {
+                max-width: 775px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                //line-height: 107.69%;
+                /* or 30px */
+                //text-align: center;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+
+                @include tablets {
+                    font-size: 20px;
+                    line-height: 160%;
+                }
+
+                @include phones {
+                    max-width: 80%;
+                    font-size: 16px;
+                }
+
+                & > b {
+                    font-weight: 900;
+                }
+            }
+
+            &--blue {
+                background-color: #A9DDF3;
+
+                .sub__item__title__text {
+                    color:#1A2340;
+                }
+            }
+        }
+
+        &__row {
+            padding: 20px 0;
+
+            &__container {
+                display: flex;
+                justify-content: center;
+
+                @include phones {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            &__text {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 149.69%;
+                letter-spacing: 0.05em;
+                color: #000000;
+
+                @include tablets {
+                    font-size: 12px;
+                    line-height: 160%;
+                }
+
+                @include phones {
+                    font-size: 9px;
+                    max-width: 80%;
+                }
+            }
+
+            &__3 {
+
+                & > .container {
+                    flex-direction: column;
+
+                    & > .sub__item__row__text {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+
+            &__4 {
+                & > .container {
+                    flex-direction: column;
+
+                    & > .sub__item__row__text:first-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            &__img {
+                @include phones {
+                    max-width: 80%;
+                }
+            }
+        }
+
+        &__column {
+
+            &--left {
+                max-width: 340px;
+                max-height: 450px;
+                flex-shrink: 0;
+
+                @include tablets {
+                    max-width: 245px;
+                    max-height: 400px;
+                }
+
+                @include phones {
+                    max-width: unset;
+                    max-height: unset;
+                }
+            }
+
+            &--right {
+                max-width: 503px;
+                //margin-left: 37px;
+                margin-left: 5%;
+
+                @include tablets {
+                    max-width: 375px;
+                }
+
+                @include phones {
+                    margin-left: 0;
+                    margin-top: 15px;
+                    max-width: 80%;
+                }
+            }
+
+            &__text {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 145.19%;
+                /* or 23px */
+                letter-spacing: 0.05em;
+                color: #000000;
+
+                @include tablets {
+                    font-size: 12px;
+                    line-height: 160%;
+                }
+
+                @include phones {
+                    font-size: 9px;
+                }
+
+                &__row {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &--2items {
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+
+                    &__left {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                    }
+                }
+            }
+
+            &__img {
+                width: 100%;
+                height: 100%;
+
+                @include phones {
+                    height: unset;
+                }
+            }
+        }
+    }
+}
+
+.text__blue {
+    font-weight: 900;
+    color: #2DAAE2;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}

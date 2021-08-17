@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аякс Арм - Контакты</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png"/>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="wrapper__container">
+            <header class="header">
+                <div class="header__container container">
+                    <div class="header__left">
+                        <a href="http://ajaxarm.ru/" class="header__left__logo">
+                            <img src="./img/logo.png" alt="логотип" class="header__left__img">
+                        </a>
+                    </div>
+                    <menu class="header__right">
+                        <ul class="header__right__list">
+                            <li class="header__right__item">
+                                <a href="index.html" class="header__right__link">
+                                    <span class="header__right__text">главная</span>
+                                </a>
+                            </li>
+                            <li class="header__right__item">
+                                <a href="prod.html" class="header__right__link">
+                                    <span class="header__right__text">каталог</span>
+                                </a>
+                            </li>
+                            <li class="header__right__item">
+                                <a href="contact.html" class="header__right__link">
+                                    <span class="header__right__text">контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </menu>
+                </div>
+                <menu class="header__right header__right--mob">
+                    <ul class="header__right__list">
+                        <li class="header__right__item">
+                            <a href="index.html" class="header__right__link">
+                                <span class="header__right__text">главная</span>
+                            </a>
+                        </li>
+                        <li class="header__right__item">
+                            <a href="prod.html" class="header__right__link">
+                                <span class="header__right__text">каталог</span>
+                            </a>
+                        </li>
+                        <li class="header__right__item">
+                            <a href="contact.html" class="header__right__link">
+                                <span class="header__right__text">контакты</span>
+                            </a>
+                        </li>
+                    </ul>
+                </menu>
+            </header>
+    
+            <div class="contact">
+                <div class="contact__info">
+                    <div class="contact__info__container container">
+                        <div class="contact__info__title">
+                            <h1 class="contact__info__title__text">Контактная информация</h1>
+                            <div class="contact__info__title__pic">
+                                <svg class="contact__info__title__img">
+                                    <use xlink:href="./img/svg/call.svg#call">
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contact__info__data">
+                            <ul class="contact__info__data__list">
+                                <li class="contact__info__data__list__item">
+                                    <span class="contact__info__data__list__text">Адрес: <b>г.Мурманск, ул.Героев Рыбачьего 16/5, офис №3</b></span>
+                                </li>
+                                <li class="contact__info__data__list__item">
+                                    <a href="tel: 8 (8152) 20-92-35" class="contact__info__data__list__text">Телефон: <b>8 (8152) 20-92-35</b></a>
+                                </li>
+                                <li class="contact__info__data__list__item">
+                                    <a href="mailto: ajaxarm51@gmail.com" class="contact__info__data__list__text">Email: <b>ajaxarm51@gmail.com</b></a>
+                                </li>
+                            </ul>
+                            <ul class="contact__info__data__list">
+                                <li class="contact__info__data__list__item">
+                                    <div class="contact__info__data__list__text">График работы:<br>
+                                        <b>Пн - Пт: 10.00 - 17.00<br>
+                                            Сб - Вс: выходные дни</b>
+                                        </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__map">
+                    <div class="contact__map__inner" id="mapApi" style="width: 100%; height: 535px;"></div>
+                </div>
+            </div>
+    
+            <footer class="footer">
+                <div class="footer__container footer__container--contact container">
+                    <a href="http://ajaxarm.ru/" class="footer__logo">
+                        <img src="./img/logo.png" alt="логотип" class="footer__logo__img">
+                    </a>
+                    <div class="footer__socials socials">
+                        <ul class="socials__list">
+                            <li class="socials__item">
+                                <a href="https://vk.com/ajaxarm" class="socials__link">
+                                    <svg class="socials__img socials__img--vk">
+                                        <use xlink:href="./img/svg/vk.svg#vk">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.instagram.com/ajaxarm/" class="socials__link">
+                                    <svg class="socials__img socials__img--insta">
+                                        <use xlink:href="./img/svg/insta.svg#insta">
+                                    </svg>
+                                </a>
+                            </li>
+                            <!-- <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg class="socials__img socials__img--fb">
+                                        <use xlink:href="./img/svg/fb.svg#fb">
+                                    </svg>
+                                </a>
+                            </li> -->
+                            <!-- <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg class="socials__img socials__img--twitter">
+                                        <use xlink:href="./img/svg/twitter.svg#twitter">
+                                    </svg>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+	<script src="./js/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=96098ecd-c006-402a-bc68-8f32d0f2db73&lang=ru_RU" type="text/javascript"></script>
+	<script src="./js/main.js"></script>
+    <script src="./js/ymaps.js"></script>
+</body> 

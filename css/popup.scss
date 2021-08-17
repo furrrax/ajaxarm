@@ -1,0 +1,203 @@
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: 10;
+
+    &__window {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        background-color: #1A2340;
+        border-radius: 10px;
+
+        @include tablets {
+            background-color: #CAEFFF;
+            border-radius: 5px;
+            padding: 37px 30px;
+        }
+
+        @include phones {
+            background-color: #1A2340;
+        }
+
+    }
+    &__form {
+        position: relative;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 415px;
+
+        @include tablets {
+            width: 260px;
+        }
+    }
+    &__row {
+        margin-bottom: 30px;
+        width: 100%;
+        
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & > label {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__name, &__email, &__tel, &__comment {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &-title {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.02em;
+            color: #9F9F9F;
+            text-transform: lowercase;
+            position: absolute;
+            top: 4px;
+            left: 50%;
+            opacity: 1;
+            transform: translateX(-50%);
+            transition: opacity .3s;
+
+            @include tablets {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+    &__name, &__email, &__tel {
+        
+        &-input {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.02em;
+            color: #000;
+            padding: 10px;
+            border-radius: 4px;
+            height: 46px;
+
+            @include tablets {
+                height: 28px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+    &__comment {
+
+        &-input {
+            border: 0;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.02em;
+            color: #000;
+            height: 130px;
+            width: 100%;
+            resize: none;
+            padding: 10px;
+            border-radius: 4px;
+            word-wrap: break-word;
+            outline: none;
+
+            @include tablets {
+                height: 80px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+    
+    &__submit {
+        
+        &-btn {
+            padding: 26px 0;
+            background-color: #33A937;
+            text-transform: uppercase;
+            border: 0;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            width: 308px;
+            text-align: center;
+
+            @include tablets {
+                padding: 15px 0;
+                font-size: 12px;
+                line-height: 14px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                width: 195px;
+            }
+
+            @include phones {
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__cancel {
+        margin-top: 20px;
+        
+        &-btn {
+            padding: 26px 0;
+            background-color: #2DAAE2;
+            text-transform: uppercase;
+            border: 0;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            width: 308px;
+            text-align: center;
+
+            @include tablets {
+                width: 195px;
+                padding: 15px 0;
+                font-size: 12px;
+                line-height: 14px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                background-color: #1A2340;
+            }
+
+            @include phones {
+                background-color: #2DAAE2;
+                box-shadow: none;
+            }
+        }
+    }
+}
